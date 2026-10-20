@@ -409,7 +409,7 @@ window.TECHHIVE_PRODUCTS = [
 window.TECHHIVE_INFO = {
   owner: "Ann Wanjiku",
   phoneDisplay: "0797 424 138",
-  phoneLink: "254797424138",
+  phoneLink: "254798782170",
   locations: ["Nairobi", "Nakuru", "Thika"],
   currency: "KSh"
 };
@@ -505,5 +505,5 @@ window.whatsAppCartMessage = function (items) {
 };
 
 window.buildWhatsAppLink = function (message) {
-  return `https://wa.me/254797424138?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/254798782170?text=${encodeURIComponent(message)}`;
 };
