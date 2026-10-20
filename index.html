@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechHive Kenya | Laptops & Electronics</title>
+    <meta
+      name="description"
+      content="Browse trusted laptops and electronics in Nairobi, Nakuru and Thika. Shop business laptops, premium devices and accessories with WhatsApp ordering from Ann Wanjiku."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/products.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="TechHive home page">
+          <span class="brand-mark">TH</span>
+          <span class="brand-text">TechHive</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="shop.html?category=Business%20Laptops">Laptops</a>
+          <a href="shop.html?category=Accessories">Accessories</a>
+          <a href="shop.html?deals=true">Deals</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <form class="nav-search" action="shop.html" method="get" aria-label="Quick search">
+            <label class="sr-only" for="navSearchInput">Search products</label>
+            <input id="navSearchInput" name="q" type="search" placeholder="Search laptops" />
+            <button type="submit" aria-label="Search products">Search</button>
+          </form>
+
+          <button class="cart-button" id="cartToggle" type="button" aria-label="Open shopping cart">
+            <span class="icon">🛒</span>
+            <span>Cart</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+
+          <a class="whatsapp-button" href="https://wa.me/254797424138" target="_blank" rel="noreferrer">WhatsApp</a>
+
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart panel" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Your Cart</h2>
+        <button class="close-cart" id="closeCart" type="button" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-summary">
+        <div class="subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">KSh 0</strong>
+        </div>
+        <div class="cart-actions">
+          <button type="button" class="secondary-button" id="continueShopping">Continue shopping</button>
+          <button type="button" class="secondary-button" id="clearCart">Clear cart</button>
+          <button type="button" class="primary-button" id="checkoutCart">Send order via WhatsApp</button>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Trusted Kenyan laptop shop</span>
+            <h1>Quality Laptops &amp; Electronics at Great Prices</h1>
+            <p>
+              Find reliable laptops and accessories in Nairobi, Nakuru and Thika. Browse our latest stock and order directly through WhatsApp.
+            </p>
+            <div class="hero-actions">
+              <a href="shop.html" class="primary-button">Shop Laptops</a>
+              <a href="https://wa.me/254797424138" class="secondary-button" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+            </div>
+            <ul class="hero-meta" aria-label="Business highlights">
+              <li>Nairobi</li>
+              <li>Nakuru</li>
+              <li>Thika</li>
+              <li>WhatsApp ordering</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Featured laptops and accessories">
+            <div class="hero-card main-card">
+              <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80"
+                alt="Open laptop on a desk"
+              />
+            </div>
+            <div class="floating-badge badge-one">
+              <strong>Business ready</strong>
+              <span>Strong performance</span>
+            </div>
+            <div class="floating-badge badge-two">
+              <strong>Fast support</strong>
+              <span>WhatsApp orders</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="container trust-grid">
+          <div><span>📍</span><strong>Nairobi</strong></div>
+          <div><span>📍</span><strong>Nakuru</strong></div>
+          <div><span>📍</span><strong>Thika</strong></div>
+          <div><span>💬</span><strong>WhatsApp ordering</strong></div>
+          <div><span>🛡️</span><strong>Professional service</strong></div>
+          <div><span>💻</span><strong>Laptop &amp; accessory catalogue</strong></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Featured collection</span>
+            <h2>Popular picks</h2>
+          </div>
+          <a href="shop.html" class="inline-link">Browse all products</a>
+        </div>
+        <div class="product-grid" id="featuredProducts"></div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Shop by category</span>
+              <h2>Find the right fit</h2>
+            </div>
+          </div>
+          <div class="category-grid" id="categoryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Smart budget ranges</span>
+            <h2>Shop by budget</h2>
+          </div>
+        </div>
+        <div class="budget-grid" id="budgetGrid"></div>
+      </section>
+
+      <section class="section alt-bg recommendation-section">
+        <div class="container recommendation-wrap">
+          <div class="section-heading small-gap">
+            <div>
+              <span class="eyebrow">Find your laptop</span>
+              <h2>What do you need it for?</h2>
+            </div>
+          </div>
+
+          <form id="recommendationForm" class="recommendation-form">
+            <div class="field-group">
+              <label for="budgetSelect">What’s your budget?</label>
+              <select id="budgetSelect" name="budget">
+                <option value="">Select budget</option>
+                <option value="20000">Under KSh 20,000</option>
+                <option value="30000">KSh 20,000–30,000</option>
+                <option value="40000">KSh 30,000–40,000</option>
+                <option value="60000">KSh 40,000–60,000</option>
+                <option value="60001">Above KSh 60,000</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="usageSelect">What will you use the laptop for?</label>
+              <select id="usageSelect" name="usage">
+                <option value="">Select use</option>
+                <option value="School">School</option>
+                <option value="Office/Business">Office/Business</option>
+                <option value="Programming">Programming</option>
+                <option value="Design">Design</option>
+                <option value="General use">General use</option>
+                <option value="Travel">Travel</option>
+                <option value="Premium/Professional use">Premium/Professional use</option>
+              </select>
+            </div>
+
+            <button type="submit" class="primary-button">Recommend me a laptop</button>
+          </form>
+
+          <div class="recommendation-result" id="recommendationResult" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <span class="brand-mark">TH</span>
+            <span class="brand-text">TechHive</span>
+          </a>
+          <p>Professional laptop and electronics retailer serving customers across Nairobi, Nakuru and Thika.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="shop.html?category=Business%20Laptops">Laptops</a></li>
+            <li><a href="shop.html?category=Accessories">Accessories</a></li>
+            <li><a href="shop.html?deals=true">Deals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Customer</h3>
+          <ul>
+            <li><a href="https://wa.me/254797424138" target="_blank" rel="noreferrer">WhatsApp</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Locations</h3>
+          <ul>
+            <li>Nairobi</li>
+            <li>Nakuru</li>
+            <li>Thika</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Ann Wanjiku. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

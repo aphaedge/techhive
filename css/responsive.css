@@ -1,0 +1,23 @@
+/* Additional responsive adjustments can live here without duplicating core styles. */
+
+@media (max-width: 740px) {
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .whatsapp-button {
+    display: none;
+  }
+
+  .hero-meta {
+    gap: 8px;
+  }
+
+  .product-card .product-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-price {
+    font-size: 1.8rem;
+  }
+}
